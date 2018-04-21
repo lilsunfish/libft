@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 17:09:46 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 15:11:42 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 16:18:33 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 char *strchr(const char *s, int c)
 {
-	if (c == '\0')
+	int len;
+	int i;
+
+	i = -1;
+	len = (ft_strlen(s) + 1);
+	while (i++ <= len)
 	{
+		if (s[i] == c)
+		{
+			return ((char *)&s[i]);
+		}
 	}
+	return (NULL);
 }
