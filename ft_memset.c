@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/17 11:21:38 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/17 18:49:42 by rastle           ###   ########.fr       */
+/*   Created: 2018/04/19 14:54:53 by rastle            #+#    #+#             */
+/*   Updated: 2018/04/21 14:51:54 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalnum(int c)
+#include "libft.h"
+
+void *ft_memset(void *b, int c, size_t len)
 {
-	if (c >= 'A' && c  <= 'Z')
-		&& (c >= 'a' && c <= 'z') && (c >= '0' && c <= '9')
+	unsigned char *temp;
+
+	temp = (unsigned char *)b;
+	while (len--)
 	{
-		return (1);;
+		*temp = (unsigned char)c;
+		temp++;
 	}
-	return (0);
+	return (b);
 }
