@@ -6,9 +6,12 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 09:52:42 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 14:59:17 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 19:03:23 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef LIBFT_H
+#define LIBFT_H
 
 #include <string.h>
 #include <unistd.h>
@@ -73,3 +76,4 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+#endif

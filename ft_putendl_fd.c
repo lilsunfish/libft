@@ -6,18 +6,18 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 14:03:14 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 14:03:48 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 18:09:41 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char const *s, int fd)
+void	ft_putendl_fd(char const *s, int fd)
 {
 	while (*s)
 	{
 		write(fd, s, 1);
 		s++;
 	}
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }

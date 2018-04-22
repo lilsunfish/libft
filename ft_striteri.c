@@ -6,11 +6,11 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 11:10:29 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 11:15:05 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 18:14:39 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 
 void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

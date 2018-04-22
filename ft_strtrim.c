@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 13:45:48 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 13:52:32 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 19:02:52 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strtrim(char const *s)
+char *ft_strtrim(char const *s)
 {
 	char *new;
 
@@ -27,7 +27,7 @@ char * ft_strtrim(char const *s)
 			}
 			else
 			{
-				new = s;
+				new = (char *)s;
 				s++;
 				new++;
 			}

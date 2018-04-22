@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 12:45:12 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 12:48:30 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 18:20:45 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libt.h"
+#include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2, size_t n)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	unsigned int i;
 

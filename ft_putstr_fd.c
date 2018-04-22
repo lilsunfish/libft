@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 14:00:24 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 14:01:45 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 18:12:28 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s, int fd)
+void	ft_putstr_fd(char const *s, int fd)
 {
 	while (*s)
 	{

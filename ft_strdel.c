@@ -6,17 +6,17 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 10:52:40 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 10:54:47 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 18:13:22 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_strdel(char **as);
+void ft_strdel(char **as)
 {
 	if  (as && *as)
 	{
-		free(*as)
+		free(*as);
 	}
 	*as = NULL;
 }

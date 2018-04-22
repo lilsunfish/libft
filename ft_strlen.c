@@ -6,13 +6,15 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 11:01:47 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/17 11:01:57 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 19:38:36 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int c;
+	size_t c;
 
 	c = 0;
 	while (str[c] != '\0')

@@ -6,9 +6,11 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 12:48:55 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 13:24:13 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 19:02:05 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strsub(char const *s, unsigned int start, size_t len)
 {

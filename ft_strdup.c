@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 11:30:36 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 16:36:14 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 19:57:06 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ char	*ft_strdup(const char *src)
 
 	len = (ft_strlen(src) + 1);
 	d = (char *)malloc(sizeof(*src * len));
-	ft_strcpy(d, src);
-	return (d);
+	if (d)
+	{
+		ft_strcpy(d, src);
+		return (d);
+	}
+	return (NULL);
 }

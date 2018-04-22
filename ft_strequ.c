@@ -6,11 +6,11 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 12:31:42 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 12:44:32 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/21 18:13:50 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libt.h"
+#include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {
