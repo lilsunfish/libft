@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 11:23:54 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 15:13:14 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/22 17:05:29 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 
 	i = 0;
 	j = 0;
-	v = 0;
+	v = -1;
 	if (to_find[0] == '\0')
 		return ((char *)str);
-	while (str[i] != '\0' && v <= len)
+	while (str[i] != '\0' && v++ <= len)
 	{
 		j = 0;
 		while (str[i + j] == to_find[j])
@@ -33,7 +33,6 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 			j++;
 		}
 		i++;
-		v++;
 	}
 	return (0);
 }
