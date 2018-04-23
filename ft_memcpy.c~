@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 19:39:45 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/22 23:22:05 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/22 23:05:17 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
+	int i;
 	char *d;
 	char *s;
 
