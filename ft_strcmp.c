@@ -6,16 +6,16 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 11:00:56 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/17 11:11:08 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/28 16:30:54 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	while (s1[i] == s2[i] && s1[i] != '\0')
 		i++;
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

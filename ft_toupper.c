@@ -6,22 +6,15 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 11:12:05 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/17 11:12:28 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/27 19:30:28 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_toupper(char *str)
+int	ft_toupper(int c)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
+	if (c >= 'a' && c <= 'z')
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] = str[i] - 32;
-		}
-		i++;
+		c -=  32;
 	}
-	return (str);
+	return (c);
 }
