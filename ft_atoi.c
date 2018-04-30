@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,28 +12,30 @@
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int r;
-	int neg;
+	long r;
+	long neg;
+	unsigned int i;
 
 	r = 0;
 	neg = 1;
 	i = 0;
-	while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n')
-		|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
+	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
+	{
 		i++;
+	}
 	if (str[i] == '-')
 	{
 		neg = -1;
 		i++;
 	}
 	if (str[i] == '+')
-		i++;
-	while ((str[i] >= '0') && (str[i] <= '9'))
 	{
-		r *= 10;
-		r += (str[i] - '0');
 		i++;
 	}
-	return (r * neg);
+	while ((str[i] >= '0') && (str[i] <= '9'))
+	{
+		r = r * 10 + (str[i] - '0');
+		i++;
+	}
+	return ((int)(r * neg));
 }

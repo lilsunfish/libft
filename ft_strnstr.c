@@ -14,22 +14,27 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	int i;
+	unsigned int i;
 	int j;
-	size_t v;
+	char *ptr;
 
 	i = 0;
 	j = 0;
-	v = -1;
+	ptr = 0;
 	if (to_find[0] == '\0')
+	{
 		return ((char *)str);
-	while (str[i] != '\0' && v++ <= len)
+	}
+	while (str[i] != '\0' && i < len)
 	{
 		j = 0;
 		while (str[i + j] == to_find[j])
 		{
 			if (to_find[j + 1] == '\0')
-				return ((char *)&str[i]);
+			{
+				ptr = (char *)&str[i];
+				return (ptr);
+			}
 			j++;
 		}
 		i++;
