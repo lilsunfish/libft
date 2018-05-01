@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 12:29:53 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 18:19:37 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/30 20:21:11 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@ char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int i;
 
 	i = 0;
-	s_out = (char *)malloc(sizeof(*s));
+	if (!s || !f)
+		return (NULL);
+	s_out = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!s_out)
+		return (NULL);
 	while (s[i])
 	{
 		s_out[i] = f(i, s[i]);

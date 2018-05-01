@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 12:12:04 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 19:01:40 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/30 20:04:36 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ char	**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	k = 0;
+	if (!s)
+		return (NULL);
 	words = numwords(s, c) + 1;
 	arr = (char **)malloc(sizeof(char *) * words);
 	if (!arr)

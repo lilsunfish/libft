@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 13:45:48 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 19:02:52 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/30 20:19:02 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char *ft_strtrim(char const *s)
 {
 	char *new;
 
-	new = (char *)malloc(sizeof(char *) * ft_strlen(s));
+	new = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (new)
 	{
 		while (*s)

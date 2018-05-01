@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 14:03:14 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 18:09:41 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/30 20:00:30 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,8 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	if (fd)
-	{
-		while (*s)
-		{
-			write(fd, s, 1);
-			s++;
-		}
-		write(fd, "\n", 1);
-	}
+	if (!s || fd < 0)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

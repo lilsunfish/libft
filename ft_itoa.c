@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 12:23:27 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 18:03:12 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/30 19:42:58 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ char *ft_itoa(int n)
 		new[1] = '\0';
 		new = ft_strjoin(new, ft_itoa(-n));
 	} 
-	if (n >= 10)
+	else if (n >= 10)
 	{
 		new = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
 	}
-	if (n <= 10 && n > 0)
+	else if (n < 10 && n >= 0)
 	{
 		new[0] = n + '0';
 		new[1] = '\0';

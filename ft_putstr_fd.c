@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 14:00:24 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 18:12:28 by rastle           ###   ########.fr       */
+/*   Updated: 2018/04/30 20:00:04 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	if (fd)
+	size_t i;
+
+	i = 0;
+	if (fd < 0)
 	{
-		while (*s)
-		{
-			write(fd, s, 1);
-			s++;
-		}
+		return ;
+	}
+	if (!s)
+		return ;
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
 	}
 }
