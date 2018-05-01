@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/01 12:18:52 by rastle            #+#    #+#             */
-/*   Updated: 2018/05/01 12:33:44 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 14:22:12 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,21 @@ t_list *ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *new;
 
-	new = (t_list *)malloc(*new);
-	if (!new)
+	if (!(new = (t_list *)malloc(sizeof(t_list))))
 		return (NULL);
-	if (!content || !content_size)
+	if (!content)
 	{
 		new->content = NULL;
 		new->content_size = 0;
 	}
 	else
 	{
-		new->content = malloc(content_size);
-		if (!new->content)
+		if (!(new->content = malloc(content_size)))
+		{
+			free(new);
 			return (NULL);
-		ft_memmove(new->content, content, content-size);
+		}
+		ft_memmove((new->content), content, content_size);
 		new->content_size = content_size;
 	}
 	new->next = NULL;

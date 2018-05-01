@@ -6,12 +6,19 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/01 12:20:07 by rastle            #+#    #+#             */
-/*   Updated: 2018/05/01 12:20:46 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 13:22:51 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
+	if (!lst)
+		return ;
+	while (lst)
+	{
+		f(lst);
+		lst = lst->next;
+	}
 }
