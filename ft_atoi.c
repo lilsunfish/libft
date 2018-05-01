@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_atoi(const char *str)
 {
 	long r;
@@ -19,7 +21,7 @@ int		ft_atoi(const char *str)
 	r = 0;
 	neg = 1;
 	i = 0;
-	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
+	while (ft_isspace(str[i]))
 	{
 		i++;
 	}
