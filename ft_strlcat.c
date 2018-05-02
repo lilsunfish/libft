@@ -6,19 +6,19 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:50:59 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/30 19:05:46 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 15:29:52 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t i;
 	size_t j;
 
 	i = 0;
-	j = 0;	
+	j = 0;
 	while (dst[i] && i < dstsize)
 	{
 		i++;
@@ -30,7 +30,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	if (i != dstsize)
 	{
-		dst[i +j] = '\0';
+		dst[i + j] = '\0';
 	}
 	return (i + ft_strlen(src));
 }

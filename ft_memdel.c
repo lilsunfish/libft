@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 10:31:58 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 20:33:19 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 15:48:32 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
 	if (ap && *ap)
 	{

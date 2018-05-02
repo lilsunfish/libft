@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 14:54:53 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 16:09:22 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 16:11:42 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char *temp;
 

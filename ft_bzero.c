@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 15:03:46 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/21 19:55:51 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 15:40:53 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

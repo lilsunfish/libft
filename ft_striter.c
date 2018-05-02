@@ -6,17 +6,18 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 11:08:07 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/30 19:25:12 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 15:28:47 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
-	while (s != NULL && *s)
+	if (!s || !f)
+		return ;
+	while (s && *s)
 	{
-		f(s);
-		s++;
+		f(s++);
 	}
 }

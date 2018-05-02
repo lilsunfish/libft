@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/30 18:39:06 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/30 18:44:22 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 16:12:44 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strcat(char *s1, const char *s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	char *d;
 	char *s;

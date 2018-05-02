@@ -6,68 +6,20 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 12:12:04 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/30 20:04:36 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 16:16:57 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int numwords(char const *s, char c)
-{
-	unsigned int i; 
-	int ct;
-
-	i = 0;
-	ct = 0;
-
-	while (s[i])
-	{
-		while (s[i] == c)
-		{
-			i++;
-		}
-		if (s[i] != '\0')
-		{
-			ct++;
-		}
-		while (s[i] && s[i] != c)
-		{
-			i++;
-		}
-	}
-	return (ct);
-}
-
-static char	*ft_strndup(const char *s, size_t n)
-{
-	char *new;
-
-	new = (char *)malloc(sizeof(char) * (n + 1));
-	if (new)
-	{
-		new = ft_strncpy(new, s, n);
-		new[n] = '\0';
-		return (new);
-	}
-	return (NULL);
-}
-
-char	**ft_strsplit(char const *s, char c)
+static char	**ft_splitter(char const *s, char c, char **arr)
 {
 	int		i;
 	int		j;
 	int		k;
-	int		words;
-	char	**arr;
 
 	i = 0;
 	k = 0;
-	if (!s)
-		return (NULL);
-	words = numwords(s, c) + 1;
-	arr = (char **)malloc(sizeof(char *) * words);
-	if (!arr)
-		return (NULL);
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -83,4 +35,18 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	arr[k] = NULL;
 	return (arr);
+}
+
+char		**ft_strsplit(char const *s, char c)
+{
+	int		words;
+	char	**arr;
+
+	if (!s)
+		return (NULL);
+	words = ft_numwords(s, c) + 1;
+	arr = (char **)malloc(sizeof(char *) * words);
+	if (!arr)
+		return (NULL);
+	return (ft_splitter(s, c, arr));
 }

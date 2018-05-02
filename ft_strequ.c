@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 12:31:42 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/30 20:02:33 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 14:34:44 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,8 @@
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	int i;
-
-	i = 0;
-	if (!s1 || !s2)
+	if (s1 && s2 && !(ft_strcmp(s1, s2)))
+		return (1);
+	else
 		return (0);
-	while (s1[i] && s2[i])
-	{
-		if (s1[i] == s2[i])
-		{	
-			i++;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	return (1);
 }

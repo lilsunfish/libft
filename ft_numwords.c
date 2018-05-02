@@ -1,18 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_numwords.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/17 14:50:31 by rastle            #+#    #+#             */
-/*   Updated: 2018/05/01 15:48:46 by rastle           ###   ########.fr       */
+/*   Created: 2018/05/01 15:03:54 by rastle            #+#    #+#             */
+/*   Updated: 2018/05/01 16:18:58 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+int		ft_numwords(char const *s, char c)
 {
-	write(1, &c, 1);
+	unsigned int	i;
+	int				ct;
+
+	i = 0;
+	ct = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+		{
+			i++;
+		}
+		if (s[i] != '\0')
+		{
+			ct++;
+		}
+		while (s[i] && s[i] != c)
+		{
+			i++;
+		}
+	}
+	return (ct);
 }

@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 14:45:09 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/18 10:48:37 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 15:49:51 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memalloc(size_t size)
+void	*ft_memalloc(size_t size)
 {
 	void *p;
 

@@ -6,16 +6,16 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 12:29:53 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/30 20:21:11 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 16:18:16 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *s_out;
-	unsigned int i;
+	char			*s_out;
+	unsigned int	i;
 
 	i = 0;
 	if (!s || !f)

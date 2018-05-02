@@ -6,13 +6,13 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/19 17:09:46 by rastle            #+#    #+#             */
-/*   Updated: 2018/04/27 19:49:35 by rastle           ###   ########.fr       */
+/*   Updated: 2018/05/01 16:19:30 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int len;
 	int i;

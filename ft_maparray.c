@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_maparray.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/17 14:50:31 by rastle            #+#    #+#             */
-/*   Updated: 2018/05/01 15:48:46 by rastle           ###   ########.fr       */
+/*   Created: 2018/05/01 15:21:17 by rastle            #+#    #+#             */
+/*   Updated: 2018/05/01 15:23:58 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+int		*ft_maparray(int *tab, int length, int (*f)(int))
 {
-	write(1, &c, 1);
+	int i;
+	int *out;
+
+	i = 0;
+	out = (int*)malloc(sizeof(int) * length);
+	while (i < length)
+	{
+		out[i] = f(tab[i]);
+		i++;
+	}
+	return (out);
 }

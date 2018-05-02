@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/17 14:50:31 by rastle            #+#    #+#             */
-/*   Updated: 2018/05/01 15:48:46 by rastle           ###   ########.fr       */
+/*   Created: 2018/05/01 15:02:33 by rastle            #+#    #+#             */
+/*   Updated: 2018/05/01 15:03:02 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+char		*ft_strndup(const char *s, size_t n)
 {
-	write(1, &c, 1);
+	char	*new;
+
+	new = (char *)malloc(sizeof(char) * (n + 1));
+	if (new)
+	{
+		new = ft_strncpy(new, s, n);
+		new[n] = '\0';
+		return (new);
+	}
+	return (NULL);
 }
