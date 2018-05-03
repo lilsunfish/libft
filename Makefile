@@ -6,7 +6,7 @@
 #    By: rastle <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 09:19:03 by rastle            #+#    #+#              #
-#    Updated: 2018/05/01 15:20:49 by rastle           ###   ########.fr        #
+#    Updated: 2018/05/02 18:40:59 by rastle           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,19 +84,15 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@echo "$(NAME) created"
 	@ranlib $(NAME)
-	@echo "$(NAME) indexed"
 
 %.o: %.c
 	@gcc $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
-	@echo "OBJ deleted"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(NAME) deleted"
 
 re: fclean all
