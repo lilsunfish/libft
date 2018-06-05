@@ -6,7 +6,7 @@
 /*   By: rastle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 09:52:42 by rastle            #+#    #+#             */
-/*   Updated: 2018/05/01 15:59:17 by rastle           ###   ########.fr       */
+/*   Updated: 2018/06/04 16:31:31 by rastle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int					ft_lstcount(t_list *lst);
+void				ft_lstrev(t_list **lst);
 int					ft_isspace(char c);
 int					ft_numwords(char const *s, char c);
 char				*ft_strndup(const char *s, size_t n);

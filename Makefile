@@ -6,7 +6,7 @@
 #    By: rastle <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 09:19:03 by rastle            #+#    #+#              #
-#    Updated: 2018/05/02 18:40:59 by rastle           ###   ########.fr        #
+#    Updated: 2018/06/04 17:31:25 by rastle           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,8 @@ SRC = ft_atoi.c \
 	  ft_lstadd.c \
 	  ft_lstiter.c \
 	  ft_lstmap.c \
+	  ft_lstcount.c \
+	  ft_lstrev.c \
 	  ft_isspace.c \
 	  ft_strndup.c \
 	  ft_numwords.c \
@@ -82,12 +84,10 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME):
+	@gcc $(CFLAGS) -c $(SRC)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-
-%.o: %.c
-	@gcc $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
